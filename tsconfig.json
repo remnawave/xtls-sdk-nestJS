@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "noEmit": false,
+    "lib": ["es2020"],
+    "declaration": true,  // Генерация файлов .d.ts для типов
+    "declarationMap": true  // Генерация карт исходников для файлов .d.ts
+  }
+}
