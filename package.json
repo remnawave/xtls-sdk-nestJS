@@ -20,7 +20,7 @@
     "@nestjs/core": "^10.4.8"
   },
   "peerDependencies": {
-    "@remnawave/xtls-sdk": "*"
+    "@remnawave/xtls-sdk": "^0.0.8"
   },
   "author": "Remnawave",
   "keywords": [
