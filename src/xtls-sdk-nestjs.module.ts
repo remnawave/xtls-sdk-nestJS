@@ -17,7 +17,7 @@ import {
 import { ModuleRef } from '@nestjs/core';
 import { XtlsModuleOptions } from './interfaces';
 import { XtlsApi } from '@remnawave/xtls-sdk';
-const logger = new Logger('nestjs-grammy:module');
+const logger = new Logger('xtls-sdk:module');
 
 @Global()
 @Module({})
@@ -46,7 +46,6 @@ export class XtlsSdkNestjsModule extends ConfigurableModuleClass implements OnAp
         };
     }
 
-    // Метод forRootAsync для асинхронной конфигурации
     public static forRootAsync(options: typeof ASYNC_OPTIONS_TYPE): DynamicModule {
         const XtlsApiNameProvider: Provider = {
             provide: MODULE_NAME,
