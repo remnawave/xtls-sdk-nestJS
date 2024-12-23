@@ -1,11 +1,4 @@
-import {
-    DynamicModule,
-    Global,
-    Logger,
-    Module,
-    OnApplicationShutdown,
-    Provider,
-} from '@nestjs/common';
+import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
 import { MODULE_NAME } from './common/constants';
 import { createXtlsSdkFactory } from './common/utils';
 import {
@@ -17,11 +10,10 @@ import {
 import { ModuleRef } from '@nestjs/core';
 import { XtlsModuleOptions } from './interfaces';
 import { XtlsApi } from '@remnawave/xtls-sdk';
-const logger = new Logger('xtls-sdk:module');
 
 @Global()
 @Module({})
-export class XtlsSdkNestjsModule extends ConfigurableModuleClass implements OnApplicationShutdown {
+export class XtlsSdkNestjsModule extends ConfigurableModuleClass {
     constructor(private readonly moduleRef: ModuleRef) {
         super();
     }
@@ -65,9 +57,5 @@ export class XtlsSdkNestjsModule extends ConfigurableModuleClass implements OnAp
             exports: [...(exports ?? []), XtlsApiNameProvider, XtlsApiProvider],
             ...rest,
         };
-    }
-
-    public async onApplicationShutdown(): Promise<void> {
-        logger.debug(`XtlsApiCoreModule: ${MODULE_NAME} shutting down`);
     }
 }
