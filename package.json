@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "description": "",
   "scripts": {
     "prepublish": "rm -rf build && tsc",
