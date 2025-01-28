@@ -18,8 +18,8 @@
     "url": "https://github.com/remnawave/xtls-sdk-nestJS/issues"
   },
   "dependencies": {
-    "@nestjs/common": "11.0.6",
-    "@nestjs/core": "11.0.6"
+    "@nestjs/common": "^11.0.6",
+    "@nestjs/core": "^11.0.6"
   },
   "peerDependencies": {
     "@remnawave/xtls-sdk": "0.1.0"
